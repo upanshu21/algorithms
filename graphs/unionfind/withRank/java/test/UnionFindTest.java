@@ -1,4 +1,6 @@
-package graphs.unionfind.withRank.java;
+package graphs.unionfind.withRank.java.test;
+
+import graphs.unionfind.withRank.java.UnionFind;
 
 class UnionFindTest {
 
