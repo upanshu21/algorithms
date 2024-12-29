@@ -8,23 +8,23 @@ def dijkstra(graph, start_node):
     heap = [(0,start_node)]
 
     while heap:
-
         current_distance, current_node = heapq.heappop(heap)
 
         if current_distance > distances[current_node]:
             continue
         
-
+        
         for neighbour, weight in graph[current_node]:
             distance = current_distance + weight
+            print(distance)
+
 
             if distance < distances[neighbour]:
                 distances[neighbour] = distance
                 heapq.heappush(heap, (distance, neighbour))
-    
-    return distance
+    return distances
 
-
+#  
 graph = {
     'A': [('B', 4), ('C', 2)],
     'B': [('D', 5), ('E', 12)],
